@@ -1,11 +1,12 @@
-const Banner = () => {
+
+const Home = () => {
     return (
         <div>
             <h2>
-            this is banner
+                this is home
             </h2>
         </div>
     );
 };
 
-export default Banner;
+export default Home;
