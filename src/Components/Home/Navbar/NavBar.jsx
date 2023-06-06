@@ -3,25 +3,31 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     const navBarItems =
         <>
-            <li>
+            <li className="text-lg">
                 <Link
                     to="/">
                     Home
                 </Link>
             </li>
-            <li>
-                <Link to="/blog">
-                    
+            <li className="text-lg">
+                <Link to="">
+                    Classes
                 </Link>
             </li>
-            <li>
-                <Link to="/allToys">
-                   
+            <li className="text-lg">
+                <Link to="">
+                    Instructors
+                </Link>
+            </li>
+            <li className="text-lg">
+                <Link to="">
+                    Dashboard
                 </Link>
             </li>
         </>
     return (
-        <div className="font-bold overflow-hidden">
+        <div className="font-bold overflow-hidden
+         bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             <div className="navbar mx-auto  max-w-7xl text-white">
                 <div className="navbar-start">
                     <img
@@ -29,7 +35,6 @@ const NavBar = () => {
                         src="https://img.freepik.com/premium-vector/emblem-art-gallery_658131-1.jpg?w=740"
                         alt="" />
                     <a
-                        id="art_title"
                         className="btn btn-ghost normal-case text-xl font-bold">
                         ART SUMMER CAMP
                     </a>
