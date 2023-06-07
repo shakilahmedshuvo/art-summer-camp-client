@@ -4,7 +4,7 @@ import SocialLogin from "../../Shared/SocialLogin";
 const Login = () => {
   return (
     <div
-      className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-3">
+      className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-3 pb-4">
       <>
         <div>
           <h2
@@ -19,16 +19,17 @@ const Login = () => {
         <div className="font-bold">
           <div className="hero max-w-7xl mx-auto">
             <div className="hero-content">
-              <div className="text-center lg:text-left">
+              <div className="text-center w-[50%] lg:text-left">
                 <img
-                  src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37373.jpg?w=740&t=st=1684351301~exp=1684351901~hmac=1360b442aeae7ada66feaaf7e313f926b3b3d6af866b6248fa40fe11ee76a7ce"
+                className="rounded-2xl"
+                  src="https://img.freepik.com/free-vector/website-maintenance-abstract-concept-vector-illustration-website-service-webpage-seo-maintenance-web-design-corporate-site-professional-support-security-analysis-update-abstract-metaphor_335657-2295.jpg?w=740&t=st=1686154803~exp=1686155403~hmac=2028b99228e672429f64e41d02ebb8766371455d3d21b77a1fcf9d9775dc9201"
                   alt="" />
               </div>
               <div
                 className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
                   <h1
-                    className="text-center text-2xl py-1 text-sky-500">
+                    className="text-center text-2xl pt-1 text-indigo-600">
                     ART SUMMER CAMP
                   </h1>
                   <hr className="border-b border-solid border-2" />
@@ -57,7 +58,6 @@ const Login = () => {
                         </h5>
                         {/* google login */}
                         <div
-
                           className="flex justify-center mx-auto items-center font-bold mt-4 text-xl">
                           <SocialLogin /> Google
                         </div>
@@ -68,7 +68,7 @@ const Login = () => {
                           Don't Have an Account?
                           <br />
                           New to Art Summer Camp? Please <Link className
-                            ="font-extrabold text-warning"
+                            ="font-extrabold text-indigo-600"
                             to='/signUp'>
                             Sign Up
                           </Link>
@@ -79,7 +79,7 @@ const Login = () => {
                       className="form-control mt-6"
                       type="submit">
                       <button
-                        className="btn">
+                        className="btn bg-indigo-900 text-white hover:text-black">
                         Login
                       </button>
                     </div>
