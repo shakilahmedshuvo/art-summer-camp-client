@@ -79,9 +79,9 @@ const NavBar = () => {
             }
         </>
     return (
-        <div className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-            <div className="navbar mx-auto  max-w-7xl text-white">
-                <div className="navbar-start">
+        <div className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 z-10 fixed">
+            <div className="navbar mx-auto text-white">
+                <div className="navbar-start ">
                     <img
                         className="w-[8%] rounded-full mr-3"
                         src="https://img.freepik.com/premium-vector/emblem-art-gallery_658131-1.jpg?w=740"
