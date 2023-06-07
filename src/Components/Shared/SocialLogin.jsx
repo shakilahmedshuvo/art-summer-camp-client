@@ -13,13 +13,11 @@ const SocialLogin = () => {
             })
     }
     return (
-        <div>
-            <button
-                onClick={handleGoogleSignIn}
-                className="text-4xl">
-                <FcGoogle></FcGoogle>
-            </button>
-        </div>
+        <span
+            onClick={handleGoogleSignIn}
+            className="text-4xl">
+            <FcGoogle></FcGoogle>
+        </span>
     );
 };
 
