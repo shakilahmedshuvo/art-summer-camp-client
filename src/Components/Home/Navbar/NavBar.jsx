@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import { FiLogOut, FiLogIn } from "react-icons/fi";
 
 const NavBar = () => {
+    const { user } = useAuth();
     const navBarItems =
         <>
             <li className="text-lg">
@@ -24,10 +27,50 @@ const NavBar = () => {
                     Dashboard
                 </Link>
             </li>
+            {/* conditional rendering */}
+            {
+                user ?
+                    <>
+                        {/* tooltip show and the profile picture */}
+                        <div
+                            className="tooltip tooltip-warning tooltip-bottom flex justify-center items-center font-bold"
+                            data-tip={user.displayName}>
+                            <img
+                                className="w-12 h-12 rounded-full"
+                                src=
+                                {
+                                    user?.photoURL
+                                }
+                                alt="" />
+                        </div>
+                        <li className="text-lg">
+                            {/* <Link
+                             onClick={handleLogOut} 
+                             className="btn btn-ghost"> */}
+                            <Link
+                                className="btn-ghost">
+                                Log Out <FiLogOut
+                                    className="text-2xl text-slate-200">
+                                </FiLogOut>
+                            </Link>
+                        </li>
+                    </>
+                    :
+                    <>
+                        <li className="text-lg">
+                            <Link
+                                className="btn-ghost"
+                                to="login">
+                                Log In <FiLogIn
+                                    className="text-2xl text-slate-200">
+                                </FiLogIn>
+                            </Link>
+                        </li>
+                    </>
+            }
         </>
     return (
-        <div className="font-bold overflow-hidden
-         bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div className="font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             <div className="navbar mx-auto  max-w-7xl text-white">
                 <div className="navbar-start">
                     <img
@@ -74,6 +117,11 @@ const NavBar = () => {
                         className="menu menu-horizontal px-1">
                         {navBarItems}
                     </ul>
+                </div>
+                <div className="navbar-end">
+                    <a className="btn border-0 font-extrabold">
+                        About Us
+                    </a>
                 </div>
             </div>
         </div>
