@@ -3,7 +3,18 @@ import useAuth from "../../Hooks/useAuth";
 import { FiLogOut, FiLogIn } from "react-icons/fi";
 
 const NavBar = () => {
-    const { user } = useAuth();
+    const { user, logOut } = useAuth();
+
+    // handleLogOut function
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => console.log(error));
+    }
+
+    // nav item 
     const navBarItems =
         <>
             <li className="text-lg">
@@ -44,10 +55,8 @@ const NavBar = () => {
                                 alt="" />
                         </div>
                         <li className="text-lg">
-                            {/* <Link
-                             onClick={handleLogOut} 
-                             className="btn btn-ghost"> */}
                             <Link
+                                onClick={handleLogOut}
                                 className="btn-ghost">
                                 Log Out <FiLogOut
                                     className="text-2xl text-slate-200">
