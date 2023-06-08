@@ -88,7 +88,9 @@ const NavBar = () => {
                         alt="" />
                     <a
                         className="btn btn-ghost normal-case text-xl font-bold">
-                        ART SUMMER CAMP
+                        ART 
+                        <br />
+                        SUMMER CAMP
                     </a>
                     <div className="dropdown">
                         <label
@@ -127,11 +129,12 @@ const NavBar = () => {
                         {navBarItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end font-bold">
                     <a className="btn border-0 font-extrabold">
                         About Us
                     </a>
                 </div>
+
             </div>
         </div>
     );

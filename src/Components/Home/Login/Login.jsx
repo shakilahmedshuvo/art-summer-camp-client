@@ -4,7 +4,7 @@ import SocialLogin from "../../Shared/SocialLogin";
 const Login = () => {
   return (
     <div
-      className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-3 pb-4">
+      className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-28 pb-8">
       <>
         <div>
           <h2

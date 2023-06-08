@@ -6,7 +6,7 @@ const Banner = () => {
         <div
             className='text-center max-w-7xl mx-auto'>
             <Carousel>
-                <div className='mt-16'>
+                <div className='mt-24'>
                     <img
                         src="https://img.freepik.com/free-vector/girl-painter-art-studio-with-canvas-brushes_107791-8114.jpg?w=996&t=st=1686160753~exp=1686161353~hmac=69e2ce56b9cd0220ca104a8b19a85d9f254a4ab2e0cf2634ec5b6e6b722f74f0" />
                 </div>

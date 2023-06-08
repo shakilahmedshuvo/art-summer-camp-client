@@ -4,7 +4,7 @@ import SocialLogin from "../../Shared/SocialLogin";
 const SignUp = () => {
     return (
         <div
-            className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-5">
+            className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-28">
             <>
                 <div>
                     <h2
@@ -21,7 +21,7 @@ const SignUp = () => {
                         <div className="hero-content">
                             <div className="text-center lg:text-left">
                                 <img
-                                className="rounded-2xl"
+                                    className="rounded-2xl"
                                     src="https://img.freepik.com/free-vector/online-registration-concept-with-flat-design_23-2147976704.jpg?w=740&t=st=1686155281~exp=1686155881~hmac=214dcfd415ed5642d511d27be665fce8cdd40546a5d1568e6ae645d07a833c31" alt="" />
                             </div>
                             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
