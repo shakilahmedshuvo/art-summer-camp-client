@@ -4,7 +4,7 @@ import InstructorCard from "./InstructorCard";
 const Instructor = () => {
     const loaderData = useLoaderData();
     return (
-        <div className="mt-24 max-w-7xl mx-auto ">
+        <div className="mt-24 max-w-7xl mx-auto pb-8">
             <h2
                 className="text-center text-5xl my-5 font-extrabold">
                 Our Instructors
