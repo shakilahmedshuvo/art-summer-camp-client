@@ -29,7 +29,7 @@ const NavBar = () => {
                 </Link>
             </li>
             <li className="text-lg">
-                <Link to="">
+                <Link to="instructor">
                     Instructors
                 </Link>
             </li>
@@ -86,12 +86,13 @@ const NavBar = () => {
                         className="w-[8%] rounded-full mr-3"
                         src="https://img.freepik.com/premium-vector/emblem-art-gallery_658131-1.jpg?w=740"
                         alt="" />
-                    <a
+                    <Link
+                        to='/'
                         className="btn btn-ghost normal-case text-xl font-bold">
-                        ART 
+                        ART
                         <br />
                         SUMMER CAMP
-                    </a>
+                    </Link>
                     <div className="dropdown">
                         <label
                             tabIndex={0}

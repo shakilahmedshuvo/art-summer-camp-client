@@ -11,6 +11,7 @@ import Login from './Components/Home/Login/Login';
 import SignUp from './Components/Home/SignUp/SignUp';
 import ErrorPage from './Components/Utilities/ErrorPage/ErrorPage';
 import AuthProvider from './Components/Utilities/Providers/AuthProvider';
+import Instructor from './Components/Home/Instructor/Instructor';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: '/signUp',
         element: <SignUp></SignUp>
+      },
+      {
+        path: '/instructor',
+        element: <Instructor></Instructor>,
+        loader: () => fetch('http://localhost:5000/instructors')
       }
     ]
   },
