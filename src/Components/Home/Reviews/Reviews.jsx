@@ -1,12 +1,10 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
-// import required modules
 import { Navigation } from "swiper";
+
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Reviews = () => {
@@ -45,21 +43,25 @@ const Reviews = () => {
                                         alt="" />
                                 </div>
                                 <div className="p-5 col-span-9">
-                                    <h2 className="text-4xl pt-2 border-t-8 border-gray-500 w-[50%]">
+                                    <h2 className="text-4xl pt-2 border-t-8 border-indigo-400 w-[50%]">
                                         {review.name}
                                     </h2>
-                                    <div className="grid md:grid-cols-12">
+                                    <div className="grid md:grid-cols-12 mt-6">
                                         <div
-                                            className="col-span-2">
-
+                                            className="col-span-1">
+                                            <FaQuoteLeft
+                                                className="text-5xl text-slate-500" />
                                         </div>
                                         <div
-                                            className="col-span-8">
-
+                                            className="col-span-10 font-bold p-5 text-slate-800 text-center">
+                                                <h2>
+                                                    {review.review}
+                                                </h2>
                                         </div>
                                         <div
-                                            className="col-span-2">
-
+                                            className="col-span-1 flex justify-end place-items-end mt-24">
+                                            <FaQuoteRight
+                                                className="text-5xl text-slate-500" />
                                         </div>
                                     </div>
                                 </div>
