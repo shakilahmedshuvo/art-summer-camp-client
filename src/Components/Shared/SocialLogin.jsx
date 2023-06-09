@@ -1,5 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../Hooks/useAuth";
+import { Toaster, toast } from "react-hot-toast";
 
 const SocialLogin = () => {
     const { googleSignIn } = useAuth();
@@ -9,6 +10,7 @@ const SocialLogin = () => {
         googleSignIn()
             .then(result => {
                 const loggedInUser = result.user;
+                toast.success('Google Login Successful')
                 console.log(loggedInUser);
             })
     }

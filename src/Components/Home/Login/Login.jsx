@@ -1,7 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Shared/SocialLogin";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Utilities/Providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
+  const { userLogIn, auth } = useContext(AuthContext);
+  // use location hook
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [error, setError] = useState('')
+  const from = location.state?.from?.pathname || '/';
+
+  const handleUserLogin = (event) => {
+    // stop reloading
+    event.preventDefault();
+    // get the info form the field
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    // userLogIn function
+    userLogIn(email, password).then(result => {
+      const logIn = result.user;
+      navigate(from, { replace: true })
+      // show the toast
+      toast.success('Log in Successful')
+    })
+      .catch(error => {
+        toast.error('Wrong Password')
+        console.log(error);
+      })
+    // reset the from
+    form.reset()
+  }
+
   return (
     <div
       className="bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% pt-28 pb-8">
@@ -21,7 +53,7 @@ const Login = () => {
             <div className="hero-content">
               <div className="text-center w-[50%] lg:text-left">
                 <img
-                className="rounded-2xl"
+                  className="rounded-2xl"
                   src="https://img.freepik.com/free-vector/website-maintenance-abstract-concept-vector-illustration-website-service-webpage-seo-maintenance-web-design-corporate-site-professional-support-security-analysis-update-abstract-metaphor_335657-2295.jpg?w=740&t=st=1686154803~exp=1686155403~hmac=2028b99228e672429f64e41d02ebb8766371455d3d21b77a1fcf9d9775dc9201"
                   alt="" />
               </div>
@@ -34,14 +66,14 @@ const Login = () => {
                   </h1>
                   <hr className="border-b border-solid border-2" />
                   {/* login form start */}
-                  <form>
+                  <form onSubmit={handleUserLogin}>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">
                           Enter Your Email
                         </span>
                       </label>
-                      <input name="email" type="text" placeholder="Email" className="input input-bordered" />
+                      <input name="email" type="text" placeholder="Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                       <label className="label">
@@ -49,7 +81,7 @@ const Login = () => {
                           Enter Your Password
                         </span>
                       </label>
-                      <input name="password" type="password" placeholder="Password" className="input input-bordered" />
+                      <input name="password" type="password" placeholder="Password" className="input input-bordered" required />
                       {/* sign in with google */}
                       <div className="mt-3 mb-2">
                         <h5
