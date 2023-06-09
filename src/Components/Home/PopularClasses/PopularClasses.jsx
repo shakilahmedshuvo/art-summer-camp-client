@@ -12,18 +12,26 @@ const PopularClasses = () => {
             })
     }, [])
     return (
-        <div>
+        <div
+            className="max-w-7xl mx-auto">
             <h2
                 className="text-center text-5xl my-5 font-extrabold">
-                popular classes
+                Our Popular Classes
             </h2>
+            <p
+                className="text-center text-xl my-4 font-bold">
+                Meet Our Popular Classes
+            </p>
             {/* map and single card section */}
-            {
-                classes.map(singleClasses => <PopularClassesCard
-                    key={singleClasses.id}
-                    singleClasses={singleClasses}
-                ></PopularClassesCard>)
-            }
+            <div
+                className="grid md:grid-cols-3 gap-3">
+                {
+                    classes.map(singleClasses => <PopularClassesCard
+                        key={singleClasses.id}
+                        singleClasses={singleClasses}
+                    ></PopularClassesCard>)
+                }
+            </div>
         </div >
     );
 };
