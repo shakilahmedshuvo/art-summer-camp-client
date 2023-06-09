@@ -13,7 +13,7 @@ const PopularClasses = () => {
     }, [])
     return (
         <div
-            className="max-w-7xl mx-auto">
+            className="max-w-7xl mx-auto mt-28 mb-8">
             <h2
                 className="text-center text-5xl my-5 font-extrabold">
                 Our Popular Classes
