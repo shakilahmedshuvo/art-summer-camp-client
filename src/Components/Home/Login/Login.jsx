@@ -66,24 +66,39 @@ const Login = () => {
                   </h1>
                   <hr className="border-b border-solid border-2" />
                   {/* login form start */}
-                  <form onSubmit={handleUserLogin}>
+                  <form
+                    onSubmit={handleUserLogin}>
                     <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">
+                      <label
+                        className="label">
+                        <span
+                          className="label-text">
                           Enter Your Email
                         </span>
                       </label>
-                      <input name="email" type="text" placeholder="Email" className="input input-bordered" required />
+                      <input
+                        name="email"
+                        type="text"
+                        placeholder="Enter Your Email"
+                        className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">
+                    <div
+                      className="form-control">
+                      <label
+                        className="label">
+                        <span
+                          className="label-text">
                           Enter Your Password
                         </span>
                       </label>
-                      <input name="password" type="password" placeholder="Password" className="input input-bordered" required />
+                      <input
+                        name="password"
+                        type="password"
+                        placeholder="Enter Your Password"
+                        className="input input-bordered" required />
                       {/* sign in with google */}
-                      <div className="mt-3 mb-2">
+                      <div
+                        className="mt-3 mb-2">
                         <h5
                           className="text-center">
                           Login With Google
@@ -94,19 +109,21 @@ const Login = () => {
                           <SocialLogin /> Google
                         </div>
                       </div>
-                      <label className="label mt-2">
+                      <label
+                        className="label mt-2">
                         <small
                           className="text-neutral-700">
                           Don't Have an Account?
                           <br />
-                          New to Art Summer Camp? Please <Link className
-                            ="font-extrabold text-indigo-600"
-                            to='/signUp'>
+                          New to Art Summer Camp? Please <Link
+                            to='/signUp'
+                            className="font-extrabold text-indigo-600">
                             Sign Up
                           </Link>
                         </small>
                       </label>
                     </div>
+                    {/* submit btn */}
                     <div
                       className="form-control mt-6"
                       type="submit">
