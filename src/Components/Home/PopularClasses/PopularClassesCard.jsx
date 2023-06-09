@@ -10,7 +10,7 @@ const PopularClassesCard = ({ singleClasses }) => {
                         alt="" />
                 </figure>
                 <div
-                    className="card-body text-center mx-auto">
+                    className="card-body text-center mx-auto border-s-2  border-gray-300">
                     <h2
                         className="card-title mx-auto font-extrabold text-2xl my-2">
                         Class Name: {name}
@@ -20,11 +20,11 @@ const PopularClassesCard = ({ singleClasses }) => {
                         Total Student Number: {studentNumber}
                     </p>
                     <p
-                        className="font-bold text-xl">
+                        className="font-bold text-lg border-b-2 border-gray-300 pb-2">
                         About This Class:
                     </p>
                     <p
-                        className="text-slate-600">
+                        className="text-slate-600 text-sm">
                         {info}
                     </p>
                     <div

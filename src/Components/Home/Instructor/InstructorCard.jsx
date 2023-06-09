@@ -10,7 +10,7 @@ const InstructorCard = ({ data }) => {
                     alt="" />
             </figure>
             <div
-                className="card-body text-center mx-auto">
+                    className="card-body text-center mx-auto">
                 <h2
                     className="card-title mx-auto font-extrabold text-2xl my-2">
                     Name: {name}
