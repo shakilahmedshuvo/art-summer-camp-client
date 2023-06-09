@@ -21,7 +21,7 @@ const InstructorCard = ({ data }) => {
                 <div
                     className="card-actions ">
                     <button
-                        className="btn font-bold btn-wide my-2 mx-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90%">
+                        className="btn font-bold btn-wide my-2 mx-auto bg-gradient-to-r from-blue-300 from-10% via-sky-300 via-30% to-indigo-300 to-90% text-white">
                         See More!
                     </button>
                 </div>

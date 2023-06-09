@@ -10,7 +10,7 @@ const SocialLogin = () => {
         googleSignIn()
             .then(result => {
                 const loggedInUser = result.user;
-                toast.success('Google Login Successful')
+                toast.success('Your Google Login Successful')
                 console.log(loggedInUser);
             })
     }

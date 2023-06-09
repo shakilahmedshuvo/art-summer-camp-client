@@ -12,29 +12,35 @@ import SignUp from './Components/Home/SignUp/SignUp';
 import ErrorPage from './Components/Utilities/ErrorPage/ErrorPage';
 import AuthProvider from './Components/Utilities/Providers/AuthProvider';
 import Instructor from './Components/Home/Instructor/Instructor';
+import PopularClasses from './Components/Home/PopularClasses/PopularClasses';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement: <ErrorPage></ErrorPage>,
-    element: <Main></Main>,
+    errorElement: <ErrorPage />,
+    element: <Main />,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home />,
+        loader: () => fetch('http://localhost:5000/instructors')
       },
       {
         path: '/login',
-        element: <Login></Login>
+        element: <Login />
       },
       {
         path: '/signUp',
-        element: <SignUp></SignUp>
+        element: <SignUp />
       },
       {
         path: '/instructor',
-        element: <Instructor></Instructor>,
+        element: <Instructor />,
         loader: () => fetch('http://localhost:5000/instructors')
+      },
+      {
+        path: 'popularClasses',
+        element: <PopularClasses />
       }
     ]
   },

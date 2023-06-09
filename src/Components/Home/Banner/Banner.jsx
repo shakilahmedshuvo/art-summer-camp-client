@@ -36,6 +36,17 @@ const Banner = () => {
                         src="https://img.freepik.com/free-vector/cartoon-mother-watching-daughter-drawing-easel-kid-painting-with-woman-flat-illustration_74855-20497.jpg?w=740&t=st=1686161045~exp=1686161645~hmac=f117d2284f230bf9c7970104d393cc95c9fe9b9244d67c8e19a39d2a34b06cbd" />
                 </div>
             </Carousel>
+            {/* TODO add some text */}
+            <div>
+                <h2
+                    className='text-4xl text-center font-bold p-4'>
+                    Arts Summer Camp
+                </h2>
+                <p
+                    className='text-sm text-center font-bold p-4'>
+                    Immerse yourself in a world of creativity and imagination at our Art Summer Camp! Discover new techniques, experiment with various mediums, and unleash your artistic potential. Join us for a fun-filled program where aspiring artists of all ages can explore, create, and express themselves in a supportive and inspiring environment.
+                </p>
+            </div>
         </div>
     );
 };
