@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper";
@@ -27,39 +27,42 @@ const Reviews = () => {
                 className="mx-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% rounded-3xl">
                 <Swiper
                     navigation={true}
-                    modules={[Navigation]}
+                    modules={
+                        [Navigation]
+                    }
                     className="mySwiper">
+                    {/* map for the slider */}
                     {
                         reviews.map(review => <SwiperSlide
-                            key={review._id}
+                            key={review.id}
                         >
                             <div
-                                className="my-16 mx-24 flex flex-col items-center font-bold">
-                                {/* rating start */}
-                                {/* <Rating
-                                    style=
-                                    {
-                                        { maxWidth: 180 }
-                                    }
-                                    value={review.rating}
-                                    readOnly
-                                /> */}
-                                <div
-                                    className="m-6">
-                                    {/* <FaQuoteLeft className="text-9xl"></FaQuoteLeft> */}
+                                className="my-16 mx-24 grid md:grid-cols-12 font-bold">
+                                <div className="col-span-3">
+                                    <img
+                                        className="rounded-2xl"
+                                        src={review.img}
+                                        alt="" />
                                 </div>
-                                {/* rating end */}
-                                <p
-                                    className="py-8 text-center">
-                                    {review.review}
-                                </p>
-                                <h3
-                                    className="text-2xl text-orange-400 uppercase">
-                                    {review.name}
-                                </h3>
-                                <img
-                                    src={review.img}
-                                    alt="" />
+                                <div className="p-5 col-span-9">
+                                    <h2 className="text-4xl pt-2 border-t-8 border-gray-500 w-[50%]">
+                                        {review.name}
+                                    </h2>
+                                    <div className="grid md:grid-cols-12">
+                                        <div
+                                            className="col-span-2">
+
+                                        </div>
+                                        <div
+                                            className="col-span-8">
+
+                                        </div>
+                                        <div
+                                            className="col-span-2">
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </SwiperSlide>)
                     }
