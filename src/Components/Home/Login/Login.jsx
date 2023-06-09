@@ -80,7 +80,8 @@ const Login = () => {
                         name="email"
                         type="text"
                         placeholder="Enter Your Email"
-                        className="input input-bordered" required />
+                        className="input input-bordered"
+                        required />
                     </div>
                     <div
                       className="form-control">
@@ -95,7 +96,8 @@ const Login = () => {
                         name="password"
                         type="password"
                         placeholder="Enter Your Password"
-                        className="input input-bordered" required />
+                        className="input input-bordered"
+                        required />
                       {/* sign in with google */}
                       <div
                         className="mt-3 mb-2">
