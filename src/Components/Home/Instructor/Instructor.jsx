@@ -2,7 +2,7 @@ import InstructorCard from "./InstructorCard";
 import { useEffect, useState } from "react";
 
 const Instructor = () => {
-    // fetch the data for setClasses
+    // fetch the data for instructors
     const [data, SetData] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/instructors')

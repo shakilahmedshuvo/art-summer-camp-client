@@ -1,9 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { FaUserShield, FaHome, FaIdCard, FaRegSave, FaUserGraduate, FaChalkboardTeacher } from "react-icons/fa";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import useAdmin from "../Components/Hooks/useAdmin";
 
 const DashBoard = () => {
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div
             className="drawer lg:drawer-open max-w-7xl mx-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% text-black font-bold">
