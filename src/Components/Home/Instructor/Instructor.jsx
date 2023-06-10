@@ -1,8 +1,16 @@
-import { useLoaderData } from "react-router-dom";
 import InstructorCard from "./InstructorCard";
+import { useEffect, useState } from "react";
 
 const Instructor = () => {
-    const loaderData = useLoaderData();
+    // fetch the data for setClasses
+    const [data, SetData] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/instructors')
+            .then(res => res.json())
+            .then(data => {
+                SetData(data)
+            })
+    }, [])
     return (
         <div className="mt-24 max-w-7xl mx-auto pb-8">
             <h2
@@ -24,7 +32,7 @@ const Instructor = () => {
             <div
                 className="grid md:grid-cols-3 gap-3">
                 {
-                    loaderData.map(data => <InstructorCard
+                    data.map(data => <InstructorCard
                         key={data.id}
                         data={data}
                     ></InstructorCard>)
