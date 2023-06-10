@@ -35,7 +35,7 @@ const NavBar = () => {
                 </Link>
             </li>
             <li className="text-lg">
-                <Link to="">
+                <Link to="dashboard">
                     Dashboard
                 </Link>
             </li>

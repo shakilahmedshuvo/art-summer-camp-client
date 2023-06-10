@@ -13,6 +13,7 @@ import ErrorPage from './Components/Utilities/ErrorPage/ErrorPage';
 import AuthProvider from './Components/Utilities/Providers/AuthProvider';
 import Instructor from './Components/Home/Instructor/Instructor';
 import PopularClasses from './Components/Home/PopularClasses/PopularClasses';
+import DashBoard from './Layout/DashBoard ';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: 'dashboard',
+    element: <DashBoard></DashBoard>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
