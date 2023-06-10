@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { FiLogOut, FiLogIn } from "react-icons/fi";
 import { FaHome, FaUserGraduate, FaChalkboardTeacher } from "react-icons/fa";
-import { BsFileText } from "react-icons/bs";
+import { SiGooglesheets } from "react-icons/si";
 
 const NavBar = () => {
     const { user, logOut } = useAuth();
@@ -38,7 +38,7 @@ const NavBar = () => {
             </li>
             <li className="text-lg">
                 <Link to="dashboard">
-                    <BsFileText />Dashboard
+                    <SiGooglesheets />Dashboard
                 </Link>
             </li>
             {/* conditional rendering */}
