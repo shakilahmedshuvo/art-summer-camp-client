@@ -18,6 +18,7 @@ import ManageClasses from './Components/DashBoard/ManageClasses/ManageClasses';
 import ManageUsers from './Components/DashBoard/ManageUsers/ManageUsers';
 import PaidClasses from './Components/DashBoard/PaidClasses/PaidClasses';
 import UserPayment from './Components/DashBoard/UserPayment/UserPayment';
+import PrivateRoute from './Components/Utilities/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'dashboard',
-    element: <DashBoard></DashBoard>,
+    element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
     children: [
       {
         path: '/dashboard/manageClasses',

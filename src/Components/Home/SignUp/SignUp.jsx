@@ -184,7 +184,7 @@ const SignUp = () => {
                                                     className="text-neutral-700">
                                                     Already Have an Account?
                                                     <br />
-                                                    Please<Link
+                                                    Please <Link
                                                         to='/login'
                                                         className="font-extrabold  text-indigo-600">
                                                         Login
