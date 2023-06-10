@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import { motion } from "framer-motion";
 
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -16,7 +17,10 @@ const Reviews = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
             className="max-w-7xl mx-auto my-20">
             <h2 className="text-4xl text-center font-bold py-4">
                 WHAT PEOPLE SAY About Us
@@ -75,7 +79,7 @@ const Reviews = () => {
                     }
                 </Swiper>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
