@@ -57,10 +57,7 @@ const ManageUsers = () => {
                                 Make Admin
                             </th>
                             <th>
-                                Action
-                            </th>
-                            <th>
-                                Action
+                                Make Instructor
                             </th>
                         </tr>
                     </thead>
@@ -94,26 +91,20 @@ const ManageUsers = () => {
                                             </button>
                                     }
                                 </td>
+                                {/* make admin */}
                                 <td>
-                                    <button
-                                        onClick=
-                                        {
-                                            () => handleDelete(user)
-                                        }
-                                        className="btn btn-ghost bg-red-500">
-                                        <FaTrashAlt className="text-white" />
-                                    </button>
-                                </td>
-                                {/* make user delete */}
-                                <td>
-                                    <button
-                                        onClick=
-                                        {
-                                            () => handleDelete(user)
-                                        }
-                                        className="btn btn-ghost bg-red-500">
-                                        <FaTrashAlt className="text-white" />
-                                    </button>
+                                    {
+                                        user.role === 'admin' ? 'Admin'
+                                            :
+                                            <button
+                                                onClick=
+                                                {
+                                                    () => handleMakeAdmin(user)
+                                                }
+                                                className="btn btn-ghost text-blue-500 text-3xl">
+                                                <FaUserShield />
+                                            </button>
+                                    }
                                 </td>
                             </tr>)
                         }
