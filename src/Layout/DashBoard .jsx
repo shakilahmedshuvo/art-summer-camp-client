@@ -1,11 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
-
+import { FaUserShield, FaHome, FaIdCard, FaRegSave, FaUserGraduate, FaChalkboardTeacher } from "react-icons/fa";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 const DashBoard = () => {
-    const isAdmin = false;
+    const isAdmin = true;
     return (
         <div
-            className="drawer lg:drawer-open max-w-7xl mx-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% text-white font-bold">
+            className="drawer lg:drawer-open max-w-7xl mx-auto bg-gradient-to-r from-indigo-200 from-10% via-sky-200 via-30% to-pink-200 to-90% text-black font-bold">
             <input
                 id="my-drawer-2"
                 type="checkbox"
@@ -16,7 +17,7 @@ const DashBoard = () => {
                 <label
                     htmlFor="my-drawer-2"
                     className="btn btn-primary drawer-button lg:hidden">
-                    Open drawer
+                    Open DashBoard
                 </label>
             </div>
             <div
@@ -33,32 +34,16 @@ const DashBoard = () => {
                                 {/* admin panel section start only admin access this section */}
                                 <li>
                                     <NavLink
+                                        to='/dashboard/manageClasses'
                                         className="bg-transparent">
-                                        Admin Home
+                                        <FaChalkboardTeacher /> Admin Manage Classes
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink
+                                        to='/dashboard/manageUsers'
                                         className="bg-transparent">
-                                        Add An Classes
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className="bg-transparent">
-                                        Manage Classes
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className="bg-transparent">
-                                        Manage Classes
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className="bg-transparent">
-                                        All Users & Student's
+                                        <FaUserShield />  Admin Manage Users
                                     </NavLink>
                                 </li>
                                 {/* admin panel section end */}
@@ -68,20 +53,16 @@ const DashBoard = () => {
                                 {/* user panel section start */}
                                 <li>
                                     <NavLink
+                                        to='/dashboard/paidClasses'
                                         className="bg-transparent">
-                                        User Home
+                                        <FaRegSave /> Your Selected Classes
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink
+                                        to='/dashboard/userPayment'
                                         className="bg-transparent">
-                                        Paid Classes
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className="bg-transparent">
-                                        Your Payment History
+                                        <RiMoneyDollarCircleFill /> Your Payments & Payments History
                                     </NavLink>
                                 </li>
                                 {/* user panel section end */}
@@ -92,25 +73,26 @@ const DashBoard = () => {
                     <div
                         className="divider">
                     </div>
+                    {/* this is for all user and admin */}
                     <li>
                         <NavLink
                             to="/">
-                            Home
+                            <FaHome />Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/popularClasses">
-                            Our Classes
+                            <FaIdCard />Our Classes
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/instructor">
-                            Our Instructors
+                            <FaUserGraduate /> Our Instructors
                         </NavLink>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 

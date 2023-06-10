@@ -14,6 +14,10 @@ import AuthProvider from './Components/Utilities/Providers/AuthProvider';
 import Instructor from './Components/Home/Instructor/Instructor';
 import PopularClasses from './Components/Home/PopularClasses/PopularClasses';
 import DashBoard from './Layout/DashBoard ';
+import ManageClasses from './Components/DashBoard/ManageClasses/ManageClasses';
+import ManageUsers from './Components/DashBoard/ManageUsers/ManageUsers';
+import PaidClasses from './Components/DashBoard/PaidClasses/PaidClasses';
+import UserPayment from './Components/DashBoard/UserPayment/UserPayment';
 
 const router = createBrowserRouter([
   {
@@ -47,7 +51,25 @@ const router = createBrowserRouter([
   },
   {
     path: 'dashboard',
-    element: <DashBoard></DashBoard>
+    element: <DashBoard></DashBoard>,
+    children: [
+      {
+        path: '/dashboard/manageClasses',
+        element: <ManageClasses />
+      },
+      {
+        path: '/dashboard/manageUsers',
+        element: <ManageUsers />
+      },
+      {
+        path: '/dashboard/paidClasses',
+        element: <PaidClasses />
+      },
+      {
+        path: '/dashboard/userPayment',
+        element: <UserPayment />
+      }
+    ]
   }
 ]);
 

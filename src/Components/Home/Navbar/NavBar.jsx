@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { FiLogOut, FiLogIn } from "react-icons/fi";
+import { FaHome, FaUserGraduate, FaChalkboardTeacher } from "react-icons/fa";
+import { BsFileText } from "react-icons/bs";
 
 const NavBar = () => {
     const { user, logOut } = useAuth();
@@ -20,23 +22,23 @@ const NavBar = () => {
             <li className="text-lg">
                 <Link
                     to="/">
-                    Home
+                    <FaHome /> Home
                 </Link>
             </li>
             <li className="text-lg">
                 <Link
                     to="/popularClasses">
-                    Classes
+                    <FaChalkboardTeacher />Classes
                 </Link>
             </li>
             <li className="text-lg">
                 <Link to="instructor">
-                    Instructors
+                    <FaUserGraduate />Instructors
                 </Link>
             </li>
             <li className="text-lg">
                 <Link to="dashboard">
-                    Dashboard
+                    <BsFileText />Dashboard
                 </Link>
             </li>
             {/* conditional rendering */}
