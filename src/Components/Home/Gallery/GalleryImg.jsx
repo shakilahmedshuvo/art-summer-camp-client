@@ -1,0 +1,69 @@
+const GalleryImg = () => {
+    return (
+        <div
+            className="grid lg:grid-cols-4 md:grid-cols-2 gap-3 py-10">
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-hand-drawn-person-walking-street_332290-126.jpg?w=740"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-hand-drawn-bird-illustration_332290-221.jpg?w=740"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-rural-nature-amazing-water-reflection-river-illustration_332290-94.jpg?w=826"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/free-vector/chinese-painting-featuring-birds-china_53876-66460.jpg?w=740&t=st=1686494671~exp=1686495271~hmac=6d8b98a416b00622bc926105831476858cbf0e2c47968b61c346353043870809"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-fairy-tale-castle-forest-hand-drawn-illustration_332290-141.jpg?w=740"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/hand-drawn-watercolor-tropical-island-with-trees-illustration_332290-98.jpg?w=826"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-landscape-with-tree-hand-drawn-illustration_332290-147.jpg?w=826"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/hand-drawn-watercolor-street-city-illustration_332290-118.jpg?w=740"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-hand-drawn-thai-boat-beach-illustration_332290-122.jpg?w=826"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/hand-drawn-boat-beach-illustration-art_524322-12.jpg?w=900"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/hand-drawn-watercolor-group-friends-having-fun-beach-illustration_332290-99.jpg?w=826"
+                alt=""
+            />
+            <img
+                className="rounded-lg"
+                src="https://img.freepik.com/premium-vector/watercolor-landscape-with-trees-waterfall_332290-93.jpg?w=740"
+                alt=""
+            />
+        </div>
+    );
+};
+
+export default GalleryImg;

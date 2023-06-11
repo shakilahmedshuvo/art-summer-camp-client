@@ -3,6 +3,7 @@ import SocialLogin from "../../Shared/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Utilities/Providers/AuthProvider";
 import { toast } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { userLogIn, auth } = useContext(AuthContext);
@@ -111,16 +112,16 @@ const Login = () => {
                       {/* show or hide btn */}
                       <p
                         onClick={() => setShow(!show)}
-                        className="relative bottom-9 left-60 md:left-64">
+                        className="relative bottom-9 left-60 md:left-64 text-3xl">
                         <small>
                           {
                             show ?
                               <span>
-                                hide
+                                <FaEyeSlash />
                               </span>
                               :
                               <span>
-                                show 
+                                <FaEye />
                               </span>
                           }
                         </small>
