@@ -30,7 +30,7 @@ const Instructor = () => {
             </p>
             {/* card map section */}
             <div
-                className="grid md:grid-cols-3 gap-3">
+                className="grid lg:grid-cols-3 md:grid-cols-2 gap-3 mx-auto">
                 {
                     data.map(data => <InstructorCard
                         key={data.id}

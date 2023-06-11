@@ -4,9 +4,10 @@ const InstructorCard = ({ data }) => {
     const { name, email, img } = data;
     return (
         <div
-            className="card w-96 glass font-bold text-center">
+            className="card w-96 glass font-bold text-center mx-auto">
             <figure>
                 <img
+                className="rounded-lg"
                     src={img}
                     alt="" />
             </figure>

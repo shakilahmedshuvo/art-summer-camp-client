@@ -64,7 +64,7 @@ const PopularClassesCard = ({ singleClasses }) => {
     return (
         <div>
             <div
-                className="card w-96 glass font-bold text-center">
+                className="card w-96 glass font-bold text-center mx-auto">
                 <figure>
                     <img
                         src={img}

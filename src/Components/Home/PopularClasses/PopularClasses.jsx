@@ -24,7 +24,7 @@ const PopularClasses = () => {
             </p>
             {/* map and single card section */}
             <div
-                className="grid md:grid-cols-3 gap-3">
+               className="grid lg:grid-cols-3 md:grid-cols-2 gap-3">
                 {
                     classes.map(singleClasses => <PopularClassesCard
                         key={singleClasses.id}
