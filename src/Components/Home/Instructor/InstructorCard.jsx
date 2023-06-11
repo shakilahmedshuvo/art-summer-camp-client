@@ -23,7 +23,7 @@ const InstructorCard = ({ data }) => {
                     className="card-actions ">
                     <button
                         className="btn font-bold btn-wide my-4 mx-auto bg-gradient-to-r from-blue-300 from-10% via-sky-300 via-30% to-indigo-300 to-90% text-black">
-                        <FaAngleDoubleRight />See More
+                        <FaAngleDoubleRight />See Classes
                     </button>
                 </div>
             </div>

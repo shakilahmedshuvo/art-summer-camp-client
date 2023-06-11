@@ -54,12 +54,16 @@ const SelectClasses = () => {
                 className="uppercase font-semibold flex justify-evenly items-center">
                 <h3
                     className="text-3xl">
-                    Total Items: {item.length}
+                    Total Items: <span
+                        className="font-extrabold"
+                    >{item.length}</span>
                 </h3>
                 <br />
                 <h3
                     className="text-3xl">
-                    Total Price: ${total}
+                    Total Price: <span
+                        className="font-extrabold"
+                    >${total}</span>
                 </h3>
                 <button
                     className="btn btn-sm bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 border-0 text-white">

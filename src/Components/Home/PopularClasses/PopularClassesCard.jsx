@@ -14,7 +14,8 @@ const PopularClassesCard = ({ singleClasses }) => {
         img,
         info,
         instructor,
-        price
+        price,
+        seats
     } = singleClasses;
 
     // handleSelect function
@@ -98,6 +99,10 @@ const PopularClassesCard = ({ singleClasses }) => {
                     <p
                         className="font-bold text-sm">
                         Total Student Number: {studentNumber}
+                    </p>
+                    <p
+                        className="font-bold text-sm">
+                        Available seats: {seats}
                     </p>
                     <div
                         className="card-actions">

@@ -12,6 +12,8 @@ const Login = () => {
   const [error, setError] = useState('')
   const from = location.state?.from?.pathname || '/';
 
+
+  // handleUserLogin function
   const handleUserLogin = (event) => {
     // stop reloading
     event.preventDefault();
@@ -19,6 +21,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+
     // userLogIn function
     userLogIn(email, password).then(result => {
       const logIn = result.user;
@@ -33,6 +36,9 @@ const Login = () => {
     // reset the from
     form.reset()
   }
+
+  // show pass and hide pass
+  const [show, setShow] = useState();
 
   return (
     <div
@@ -94,10 +100,31 @@ const Login = () => {
                       </label>
                       <input
                         name="password"
-                        type="password"
+                        type={show ?
+                          'text'
+                          :
+                          'password'
+                        }
                         placeholder="Enter Your Password"
                         className="input input-bordered"
                         required />
+                      {/* show or hide btn */}
+                      <p
+                        onClick={() => setShow(!show)}
+                        className="relative bottom-9 left-60 md:left-64">
+                        <small>
+                          {
+                            show ?
+                              <span>
+                                hide
+                              </span>
+                              :
+                              <span>
+                                show 
+                              </span>
+                          }
+                        </small>
+                      </p>
                       {/* sign in with google */}
                       <div
                         className="mt-3 mb-2">
