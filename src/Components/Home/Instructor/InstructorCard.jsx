@@ -10,7 +10,7 @@ const InstructorCard = ({ data }) => {
                     alt="" />
             </figure>
             <div
-                    className="card-body text-center mx-auto">
+                className="card-body text-center mx-auto">
                 <h2
                     className="card-title mx-auto font-extrabold text-2xl my-2">
                     Name: {name}
@@ -21,8 +21,8 @@ const InstructorCard = ({ data }) => {
                 <div
                     className="card-actions ">
                     <button
-                        className="btn font-bold btn-wide my-2 mx-auto bg-gradient-to-r from-blue-300 from-10% via-sky-300 via-30% to-indigo-300 to-90% text-white">
-                        See More!
+                        className="btn font-bold btn-wide my-4 mx-auto bg-gradient-to-r from-blue-300 from-10% via-sky-300 via-30% to-indigo-300 to-90% text-black">
+                        See More
                     </button>
                 </div>
             </div>
