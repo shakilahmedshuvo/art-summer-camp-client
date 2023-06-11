@@ -5,7 +5,7 @@ const Instructor = () => {
     // fetch the data for instructors
     const [data, SetData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/instructors')
+        fetch('https://art-summer-camp-server.vercel.app/instructors')
             .then(res => res.json())
             .then(data => {
                 SetData(data)

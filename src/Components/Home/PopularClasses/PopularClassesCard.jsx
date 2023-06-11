@@ -23,7 +23,7 @@ const PopularClassesCard = ({ singleClasses }) => {
         // console.log(item);
         if (user && user.email) {
             const itemSelected = { selectItemId: id, name, img, price, email: user.email };
-            fetch('http://localhost:5000/selectClass', {
+            fetch('https://art-summer-camp-server.vercel.app/selectClass', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

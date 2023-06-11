@@ -9,7 +9,7 @@ const SelectClasses = () => {
     // get the total price
     const total = item.reduce((sum, item) => item.price + sum, 0);
     // load the data
-    const url = `http://localhost:5000/selectClass?email=${user?.email}`;
+    const url = `https://art-summer-camp-server.vercel.app/selectClass?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -30,7 +30,7 @@ const SelectClasses = () => {
             confirmButtonText: 'Yes This Classes'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://art-summer-camp-server.vercel.app/carts/${item._id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
