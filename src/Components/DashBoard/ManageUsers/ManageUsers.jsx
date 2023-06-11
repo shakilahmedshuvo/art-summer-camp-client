@@ -97,7 +97,8 @@ const ManageUsers = () => {
                                 {/* make admin */}
                                 <td>
                                     {
-                                        user.role === 'admin' ? 'Admin'
+                                        user.role === 'admin' ?
+                                            'Currently Instructor'
                                             :
                                             <button
                                                 onClick=
