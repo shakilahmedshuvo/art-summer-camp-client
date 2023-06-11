@@ -1,11 +1,64 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Utilities/Providers/AuthProvider";
+import { useContext } from "react";
+import { FaAngleDoubleRight } from "react-icons/fa";
+
 const PopularClassesCard = ({ singleClasses }) => {
-    const { name, studentNumber, img, info, id, instructor, price } = singleClasses;
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { name,
+        id,
+        studentNumber,
+        img,
+        info,
+        instructor,
+        price
+    } = singleClasses;
 
     // handleSelect function
-    // const handleSelect = classes => {
-    //     console.log(classes);
-    //     const seletedClasses = {}
-    // }
+    const handleSelect = item => {
+        // console.log(item);
+        if (user && user.email) {
+            const itemSelected = { selectItemId: id, name, img, price, email: user.email };
+            fetch('http://localhost:5000/selectClass', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(itemSelected)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'top-center',
+                            icon: 'success',
+                            title: 'Your Class Was Selected',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                })
+        }
+        else {
+            Swal.fire({
+                title: 'Please Login to Select The Class',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login Now & Select The Class'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', {
+                        state: { from: location }
+                    })
+                }
+            })
+        }
+    }
 
     return (
         <div>
@@ -49,9 +102,9 @@ const PopularClassesCard = ({ singleClasses }) => {
                     <div
                         className="card-actions">
                         <button
-                            // onClick="handleSelect"
+                            onClick={handleSelect}
                             className="btn font-bold btn-wide my-4 mx-auto bg-gradient-to-r from-blue-300 from-10% via-sky-300 via-30% to-indigo-300 to-90% text-black">
-                            Select  The Class
+                            <FaAngleDoubleRight />Select The Class
                         </button>
                     </div>
                 </div>

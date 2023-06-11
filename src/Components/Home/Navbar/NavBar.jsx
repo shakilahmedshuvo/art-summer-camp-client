@@ -55,15 +55,16 @@ const NavBar = () => {
                     <FaUserGraduate />Instructors
                 </Link>
             </li>
-            <li className="text-lg">
-                <Link to="/dashboard">
-                    <SiGooglesheets />Dashboard
-                </Link>
-            </li>
             {/* conditional rendering */}
             {
                 user ?
                     <>
+
+                        <li className="text-lg">
+                            <Link to="/dashboard">
+                                <SiGooglesheets />Dashboard
+                            </Link>
+                        </li>
                         {/* tooltip show and the profile picture */}
                         <div
                             className="tooltip tooltip-warning tooltip-bottom flex justify-center items-center font-bold"
