@@ -20,6 +20,7 @@ import PaidClasses from './Components/DashBoard/PaidClasses/PaidClasses';
 import UserPayment from './Components/DashBoard/UserPayment/UserPayment';
 import PrivateRoute from './Components/Utilities/PrivateRoute/PrivateRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AdminRoute from './Components/Utilities/AdminRoute/AdminRoute';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -57,11 +58,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/dashboard/manageClasses',
-        element: <ManageClasses />
+        element: <AdminRoute><ManageClasses /></AdminRoute>
       },
       {
         path: '/dashboard/manageUsers',
-        element: <ManageUsers />
+        element: <AdminRoute><ManageUsers /></AdminRoute>
       },
       {
         path: '/dashboard/paidClasses',
