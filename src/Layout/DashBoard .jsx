@@ -54,7 +54,7 @@ const DashBoard = () => {
                                 {/* user panel section start */}
                                 <li>
                                     <NavLink
-                                        to='/dashboard/paidClasses'
+                                        to='/dashboard/selectClasses'
                                         className="bg-transparent">
                                         <FaRegSave /> Your Selected Classes
                                     </NavLink>

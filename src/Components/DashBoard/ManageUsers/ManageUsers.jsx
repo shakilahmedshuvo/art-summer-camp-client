@@ -1,5 +1,5 @@
 
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
@@ -77,9 +77,12 @@ const ManageUsers = () => {
                                     {user.email}
                                 </td>
                                 {/* make admin */}
-                                <td>
+                                <td
+                                    className="text-center">
                                     {
-                                        user.role === 'admin' ? 'Admin'
+                                        user.role === 'admin'
+                                            ?
+                                            'Currently Admin'
                                             :
                                             <button
                                                 onClick=

@@ -16,11 +16,12 @@ import PopularClasses from './Components/Home/PopularClasses/PopularClasses';
 import DashBoard from './Layout/DashBoard ';
 import ManageClasses from './Components/DashBoard/ManageClasses/ManageClasses';
 import ManageUsers from './Components/DashBoard/ManageUsers/ManageUsers';
-import PaidClasses from './Components/DashBoard/PaidClasses/PaidClasses';
 import UserPayment from './Components/DashBoard/UserPayment/UserPayment';
 import PrivateRoute from './Components/Utilities/PrivateRoute/PrivateRoute';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AdminRoute from './Components/Utilities/AdminRoute/AdminRoute';
+import SelectClasses from './Components/DashBoard/SelectClasses/SelectClasses';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -65,8 +66,8 @@ const router = createBrowserRouter([
         element: <AdminRoute><ManageUsers /></AdminRoute>
       },
       {
-        path: '/dashboard/paidClasses',
-        element: <PaidClasses />
+        path: '/dashboard/selectClasses',
+        element: <SelectClasses />
       },
       {
         path: '/dashboard/userPayment',
