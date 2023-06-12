@@ -79,13 +79,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div
-      className='overflow-hidden'>
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
         </QueryClientProvider>
       </AuthProvider>
-    </div>
   </React.StrictMode>,
 )

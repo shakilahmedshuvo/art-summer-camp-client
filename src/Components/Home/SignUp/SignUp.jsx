@@ -54,15 +54,20 @@ const SignUp = () => {
                     </p>
                 </div>
                 <div className="font-bold pb-10" data-aos="zoom-out">
-                    <div className="hero max-w-7xl mx-auto">
-                        <div className="hero-content">
-                            <div className="text-center lg:text-left">
+                    <div
+                        className="hero max-w-7xl mx-auto">
+                        <div
+                            className="hero-content gap-0 justify-start mx-auto">
+                            <div
+                                className="text-center w-[62%] lg:text-left mx-auto">
                                 <img
-                                    className="rounded-2xl"
-                                    src="https://img.freepik.com/free-vector/online-registration-concept-with-flat-design_23-2147976704.jpg?w=740&t=st=1686155281~exp=1686155881~hmac=214dcfd415ed5642d511d27be665fce8cdd40546a5d1568e6ae645d07a833c31" alt="" />
+                                    className="rounded-2xl mx-auto"
+                                    src="https://img.freepik.com/free-vector/online-registration-concept-with-flat-design_23-2147976704.jpg?w=740&t=st=1686155281~exp=1686155881~hmac=214dcfd415ed5642d511d27be665fce8cdd40546a5d1568e6ae645d07a833c31"
+                                    alt="" />
                             </div>
-                            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                                <div className="card-body">
+                            <div
+                                className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                                <div className="card-body justify-around">
                                     <h1
                                         className="text-center text-2xl py-1 text-indigo-600">
                                         ART SUMMER CAMP
@@ -191,28 +196,11 @@ const SignUp = () => {
                                                     className="text-red-600">
                                                     Photo URL is required
                                                 </span>}
-                                            <label
-                                                className="label mt-1">
-                                                <small
-                                                    className="text-neutral-700">
-                                                    Already Have an Account?
-                                                    <br />
-                                                    Please <Link
-                                                        to='/login'
-                                                        className="font-extrabold  text-indigo-600">
-                                                        Login
-                                                    </Link>
-                                                </small>
-                                            </label>
                                         </div>
                                         {/* divider */}
                                         <div>
-                                            <div
-                                                className="divider">
-                                                OR
-                                            </div>
                                             <h2
-                                                className="text-center">
+                                                className="text-center my-2">
                                                 Sign UP With Google
                                             </h2>
                                             {/* google login */}
@@ -221,9 +209,22 @@ const SignUp = () => {
                                                 <SocialLogin /> Google
                                             </div>
                                         </div>
+                                        <label
+                                            className="label mt-1 text-center mx-auto">
+                                            <small
+                                                className="text-neutral-700 mx-auto">
+                                                Already Have an Account?
+                                                <br />
+                                                Please <Link
+                                                    to='/login'
+                                                    className="font-extrabold  text-indigo-600">
+                                                    Login
+                                                </Link>
+                                            </small>
+                                        </label>
                                         {/* submit btn */}
                                         <div
-                                            className="form-control mt-6">
+                                            className="form-control mt-5">
                                             <input
                                                 className="btn bg-indigo-900 text-white hover:text-black"
                                                 type="submit"

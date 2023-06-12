@@ -57,7 +57,8 @@ const Login = () => {
         </div>
         <div className="font-bold">
           <div className="hero max-w-7xl mx-auto">
-            <div className="hero-content">
+            <div
+              className="hero-content gap-0 justify-evenly">
               <div className="text-center w-[50%] lg:text-left">
                 <img
                   className="rounded-2xl"
@@ -140,9 +141,9 @@ const Login = () => {
                         </div>
                       </div>
                       <label
-                        className="label mt-2">
+                        className="label mt-2 text-center">
                         <small
-                          className="text-neutral-700">
+                          className="text-neutral-700 text-center mx-auto">
                           Don't Have an Account?
                           <br />
                           New to Art Summer Camp? Please <Link
